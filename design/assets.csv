@@ -1,0 +1,9 @@
+id,role,type,description,size/ratio,style line ref,source
+alps,playfield backdrop,background,Layered Wallis Matterhorn panorama,16:9,F1,generate
+cover,share and launch illustration,background,Yellow crane with rising construction against Swiss Alps,3:2,F1,generate
+logo,header and crane branding,svg,Original Imboden logo,217:50,website CI,reference_media[0]
+fonts,headlines subheads body,font,Big Shoulders Display Bitter Open Sans,variable,website CI,reference_media[0]
+music,quiet loop,audio,Light industrial percussion optimistic alpine instrumental,30s,audio,generate
+impact,placement feedback,audio,Single short construction block landing,1s,audio,generate
+crane-blocks,animated interactive geometry,canvas,Parametric crane ropes concrete slabs and particles,480x720,F1,generate
+cover_alt,unused launch artwork,background,Alternative crane construction composition,3:2,F1,generate

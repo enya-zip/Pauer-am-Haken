@@ -1,0 +1,53 @@
+{
+  "format": "source-handoff-zip",
+  "native_higgsfield_import_format_verified": false,
+  "game": "Pauer am Haken",
+  "customer": "Ulrich Imboden",
+  "type": "game",
+  "suggested_category": "arcade",
+  "source_website_id": "6949661a-3c28-4ec8-a243-899b7ecea1ee",
+  "source_url": "https://pauer-am-haken.higgsfield.app",
+  "export_date": "2026-11-11",
+  "source_revision": "410b703bfbd417495bff0a4eb83fa006a4711434",
+  "source_revision_date": "2026-10-28T10:08:37+00:00",
+  "source_files_unchanged": true,
+  "source_file_count": 467,
+  "source_status": "clean checkout of current main branch",
+  "original_infrastructure": {
+    "db": false,
+    "r2": false,
+    "kv": false,
+    "durableObject": "Room"
+  },
+  "included_assets": [
+    "app/public/assets/alps.webp",
+    "app/public/assets/bitter.woff2",
+    "app/public/assets/cover.png",
+    "app/public/assets/display.woff2",
+    "app/public/assets/favicon.svg",
+    "app/public/assets/imboden-logo.svg",
+    "app/public/assets/impact.mp3",
+    "app/public/assets/music.mp3",
+    "app/public/assets/og-wide.png",
+    "app/public/assets/og.png",
+    "app/public/assets/sans.woff2"
+  ],
+  "checks": {
+    "logic_contract": "passed",
+    "existing_rules_check": "passed",
+    "client_syntax": "passed",
+    "referenced_local_assets": "passed",
+    "browser_server_rules_equal": "passed",
+    "archive_crc": "verified at creation",
+    "build": "not run: Bun and dependencies unavailable",
+    "target_account_import": "not performed",
+    "platform_deploy_status": "deployed",
+    "live_source_http_comparison": "not verified: HTTP 403"
+  },
+  "account_migration_notes": [
+    "Create new game and new infrastructure in target account",
+    "Update metadata URLs for new domain",
+    "Browser-local records and active rounds are not transferred",
+    "No account credentials or git history included"
+  ]
+}

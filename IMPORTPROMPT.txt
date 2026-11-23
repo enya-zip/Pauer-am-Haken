@@ -1,0 +1,11 @@
+Bitte übernimm das beigefügte Spiel «Pauer am Haken» von Ulrich Imboden in meinen verbundenen Higgsfield-Account.
+
+Erstelle dafür ein eigenes Browsergame (type: game, category: arcade) mit einer freien neuen Subdomain. Verwende das vollständige Projekt aus app/ im ZIP. Übernimm Spielcode, Server, Kranmechanik, Imboden-Gestaltung, Texte, Bilder, Fonts, Musik und Soundeffekte. Bitte nichts neu gestalten oder generieren.
+
+Das Spiel muss öffentlich ohne Login funktionieren. Behalte app.manifest.json mit durableObject: "Room" bei und lasse die Infrastruktur im neuen Account neu anlegen. Übernimm keine Infrastruktur-ID des ursprünglichen Accounts. Verbindungen sollen zur neuen Spiel-URL gehören.
+
+Aktualisiere favicon_url, og_image_url und marketplace_cover_url in app/src/app-meta.json sowie og:image in app/public/index.html auf die neue Domain und die vorhandenen Dateien unter /assets/. Nutze /assets/favicon.svg, /assets/og-wide.png und /assets/cover.png. Die relativen Asset- und WebSocket-Pfade im Client beibehalten.
+
+Prüfe danach Spielstart, Kranbewegung, Bauteil setzen, kleiner werdende Auflagefläche, Bonus nach drei perfekten Treffern, Neustart, Ton und mobile Bedienung. Führe die verfügbaren Projektprüfungen und den Plattform-Build aus und stelle das Spiel unter der neuen URL bereit. Eine Veröffentlichung im Community-Feed bitte separat mit mir klären.
+
+Lies zuerst README_IMPORT.txt und export-manifest.json im Paket. Falls kein nativer ZIP-Import vorhanden ist, übernimm die enthaltenen Quelldateien über die verfügbaren Higgsfield-Projektwerkzeuge. Sage klar, wenn der Import mit den verfügbaren Werkzeugen nicht möglich ist.
