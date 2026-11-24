@@ -1,0 +1,37 @@
+# Veröffentlicht Pauer am Haken bei jedem Push automatisch auf GitHub Pages.
+# Der Inhalt von app/public wird in den Branch "gh-pages" kopiert;
+# GitHub Pages zeigt diesen Branch dann öffentlich an.
+name: Spiel veröffentlichen
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      # Versionskennung eintragen: Die Startseite vergleicht sie mit version.json
+      # und lädt sich neu, wenn der Browser noch eine alte Version zwischengespeichert hat.
+      - name: Version eintragen
+        run: |
+          BUILD=${GITHUB_SHA::7}
+          sed -i "s/__BUILD__/$BUILD/g" app/public/index.html
+          echo "{\"build\":\"$BUILD\"}" > app/public/version.json
+      - uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./app/public
+          publish_branch: gh-pages
+          force_orphan: true
+          enable_jekyll: false
